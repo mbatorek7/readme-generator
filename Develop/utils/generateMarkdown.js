@@ -14,7 +14,7 @@ function renderLicenseLink(license) {
   if(license == "None") {
     return "";
   } else {
-
+    return `[${renderLicenseBadge(license)}](https://choosealicense.com/licenses/${license}/)`;
   }
 }
 
@@ -24,7 +24,7 @@ function renderLicenseSection(license) {
   if(license == "None") {
     return "";
   } else {
-
+    return "## License";
   }
 }
 
@@ -37,9 +37,12 @@ function generateMarkdown(data) {
 
   - [Description](#description)
   - [Installation](#installation)
+  - [Usage](#usage)
   - [Credits](#credits)
   - [License](#license)
   - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
 
   ## Description
   ${data.desc}
@@ -48,11 +51,14 @@ function generateMarkdown(data) {
   To clone this repo:
   git clone ${data.installation}
 
+  ## Usage
+  ${data.usage}
+
   ## Credits
   ${data.credits}
 
-  ## License
-  ${renderLicenseBadge(data.license)}
+  ${renderLicenseSection(data.license)}
+  ${renderLicenseLink(data.license)} 
 
   ## Contributing
   To contribute to this application, create a pull request.
@@ -64,6 +70,13 @@ function generateMarkdown(data) {
   - Create a new Pull Request
 
   Following a code review, your feature will be merged.
+
+  ## Tests
+  ${data.tests}
+
+  ## Questions?
+  - Github Profile: [${data.github}](https://github.com/${data.github})
+  - Email: ${data.email}
 `;
 }
 

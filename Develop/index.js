@@ -31,7 +31,27 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'What license do you want to use?',
-        choices: ['MIT', 'Apache', 'GPLv2', 'None']
+        choices: ['mit', 'apache-2.0', 'gpl-3.0', 'none']
+    }, 
+    {
+        type: 'input',
+        name: 'usage',
+        message: "How does the user use this application?"
+    }, 
+    {
+        type: 'input',
+        name: 'tests',
+        message: "What are the test instructions?"
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: "Enter GitHub username:"
+    }, 
+    {
+        type: 'input',
+        name: 'email',
+        message: "Enter email:"
     }
 ];
 
