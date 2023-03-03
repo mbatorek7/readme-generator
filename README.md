@@ -33,6 +33,5 @@ THEN I am taken to the corresponding section of the README
 
 ### Screenshots
 
-
-
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+Here is what the final product looks like and how to use it:
+![Final product.](./Develop/images/final-product.gif)

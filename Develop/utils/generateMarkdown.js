@@ -1,4 +1,5 @@
 function renderLicenseBadge(license) {
+  //create switch case for different badges and link to the licenses
   switch(license) {
     case "MIT":
       return "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
@@ -12,6 +13,7 @@ function renderLicenseBadge(license) {
 }
 
 function renderLicenseSection(license) {
+  //if user picks no license, then do not create license section in README
   if(license == "none") {
     return "";
   } else {
@@ -39,6 +41,7 @@ function generateMarkdown(data) {
 
   ## Installation
   To clone this repo:
+
   git clone ${data.installation}
 
   ## Usage
@@ -51,13 +54,7 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(data.license)} 
 
   ## Contributing
-  To contribute to this application, create a pull request.
-  Here are the steps needed for doing that:
-  - Fork the repo
-  - Create a feature branch (git checkout -b NAME-HERE)
-  - Commit your new feature (git commit -m 'Add some feature')
-  - Push your branch (git push)
-  - Create a new Pull Request
+  To contribute to this application ${data.contribute}.
 
   Following a code review, your feature will be merged.
 
